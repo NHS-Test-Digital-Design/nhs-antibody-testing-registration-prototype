@@ -76,13 +76,15 @@
       </tbody>
     </table>
 
-    <form class="" action="../who-other-orgs"get">
+    {{ govukWarningText({
+      text: "Do not return any PCR tests. They will not be processed and you will not receive any results.",
+      iconFallbackText: "Warning"
+    }) }}
 
-
-<button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
-Register more test kits
-</button>
-
+    {{ govukButton({
+      text: "Register more test kits",
+      href: "../who-other-orgs"
+    }) }}
 
     <h2 class="govuk-heading-m">We want to hear from you</h2>
     <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 3 minutes)</p>
