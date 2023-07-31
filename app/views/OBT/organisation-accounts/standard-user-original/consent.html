@@ -39,15 +39,19 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        {{ pageHeading }}
-      </h1>
+    <form class="" action="enter-UON" method="get">
 
-      <h2 class="govuk-heading-m">
+    <fieldset class="govuk-fieldset" aria-describedby="consent-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-6">
+          {{ pageHeading }}
+        </h1>
+      </legend>
+
+      <h2 id="consent-hint" class="govuk-heading-m">
         Confirm both statements:
       </h2>
 
-      <form class="" action="enter-UON" method="get">
         {{ govukCheckboxes({
           idPrefix: "covidUpload",
           name: "cuConfirm",
@@ -62,6 +66,9 @@
             }
           ]
         }) }}
+
+        </fieldset>
+
         <input class="govuk-button" type="submit" value="Continue">
 
       </form>
