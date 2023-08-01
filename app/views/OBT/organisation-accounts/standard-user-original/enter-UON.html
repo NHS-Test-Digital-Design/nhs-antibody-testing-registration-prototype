@@ -38,7 +38,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <form action="check-UON" method="get">
-      <div class="govuk-form-group">
+      
+    <!--  <div class="govuk-form-group">
         <h1 class="govuk-heading-xl">
           {{ pageHeading }}
         </h1>
@@ -48,11 +49,27 @@
         <br>
         <br>
         <input class="govuk-input govuk-!-width-two-thirds" id="UON" name="UON" type="text">
+        </div> -->
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="event-name">
+              {{ pageHeading }}
+            </label>
+          </h1>
+          <div id="uon-hint" class="govuk-body">
+            <p>It is an 8-digit number, for example 12345678. It will have been emailed to you by your organisation. Your UON is different from your usual organisation ID.</p>
+            <p><a href="https://organisation-number-lookup.test-for-coronavirus.service.gov.uk/" class="govuk-link govuk-link--no-visited-state" target="_blank">Get help finding your UON (opens in new tab)</a></p>
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="event-name" name="event-name" type="text" aria-describedby="uon-hint">
         </div>
+
         <input class="govuk-button" type="submit" value="Continue">
+
       </form>
     </div>
   </div>
+
 
 
   {% endblock %}
