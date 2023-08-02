@@ -1,0 +1,68 @@
+{% set version = "friction" %}
+{% set pageTitle = "Coronavirus tests" %}
+
+{% extends "includes/layout.html" %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Beta"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.go(-1);"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        {{ pageTitle }}
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        PCR tests
+      </h2>
+      <p class="govuk-body">
+        Most sensitive type of test. It must be processed in a lab.
+      </p>
+      
+      <h3 class="govuk-heading-s">
+        Get a PCR test kit
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>The person has not given a sample yet</li>
+        <li>Test kit is delivered to the person's home and returned to a lab by post</li>
+        <li>The sample must be processed at a lab</li>
+        <li>Test results are usually avaailable within 72 hours. It could take longer than this,
+        but 119 are only able to investigate after 5 days</li>
+      </ul>
+      <a href="#" class="govuk-button" type="submit" role="button">
+        Get a PCR test
+      </a>
+
+      <h3 class="govuk-heading-s govuk-!-margin-top-2">
+        Register a PCR test kit
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>The sample has already been taken</li>
+        <li>The sample is at the lab for processing and the person needs their result</li>
+      </ul>
+      <a href="#" class="govuk-button" type="submit" role="button">
+        Register a PCR test
+      </a>
+
+      <p class="govuk-body govuk-!-margin-top-2">If you cannot register a PCR test kit through this service, <a href="https://www.gov.uk/register-pcr-test">use the Admin Portal to register a PCR test kit</a>.</p>
+
+    </div>
+    {# end govuk-grid-column-two-thirds #}
+
+  </div>
+  {# end govuk-grid-row #}
+
+{% endblock %}
