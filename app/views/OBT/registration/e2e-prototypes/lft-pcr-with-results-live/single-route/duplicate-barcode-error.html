@@ -1,0 +1,49 @@
+
+{% set pageHeading = "There is a problem" %}
+ {% set version = "organisational/ind-account/v3" %}
+{% set serviceName = "Get a coronavirus test" %}
+{% extends "includes/layout.html" %}
+
+{% block pageTitle %}
+  {{ pageHeading }} - Duplicate Barcode Error
+{% endblock %}
+
+{% block beforeContent %}
+<div class="">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+    {{ govukPhaseBanner({
+      tag: {
+        text: "alpha"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      }) }}
+
+      {{ govukBackLink({
+        text: "Back",
+        href: "javascript:window.history.go(-1);"
+      }) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      {{ pageHeading }}
+    </h1>
+
+    <p class="govuk-body">You cannot use the barcode [BARCODE] because you've already used it for [PERSON'S NAME].</p>
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Use a different barcode
+    </button>
+
+      </div>
+
+{% endblock %}
